@@ -117,14 +117,10 @@ const Index = () => {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="articles" className="space-y-8">
-          <TabsList className="grid w-full grid-cols-3">
+          <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="articles" className="flex items-center space-x-2">
               <Icon name="FileText" size={16} />
               <span>Статьи</span>
-            </TabsTrigger>
-            <TabsTrigger value="archive" className="flex items-center space-x-2">
-              <Icon name="Calendar" size={16} />
-              <span>Архив</span>
             </TabsTrigger>
             <TabsTrigger value="about" className="flex items-center space-x-2">
               <Icon name="User" size={16} />
@@ -190,58 +186,6 @@ const Index = () => {
                 </Card>
               ))}
             </div>
-          </TabsContent>
-
-          {/* Archive Tab */}
-          <TabsContent value="archive" className="space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Icon name="Archive" size={20} />
-                  <span>Архив статей</span>
-                </CardTitle>
-                <CardDescription>
-                  Все статьи, организованные по месяцам и годам
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {monthlyArchive.map((month, index) => (
-                    <Card key={index} className="game-card">
-                      <CardHeader className="pb-3">
-                        <div className="flex items-center justify-between">
-                          <CardTitle className="text-lg">{month.month}</CardTitle>
-                          <Badge variant="secondary" className="flex items-center space-x-1">
-                            <Icon name="FileText" size={12} />
-                            <span>{month.count}</span>
-                          </Badge>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        {month.articles.length > 0 ? (
-                          <div className="space-y-2">
-                            {month.articles.map((article) => (
-                              <div key={article.id} className="flex items-center justify-between p-2 rounded bg-muted/50 hover:bg-muted transition-colors">
-                                <span className="text-sm font-medium truncate">{article.title}</span>
-                                <div className="flex items-center space-x-1 text-muted-foreground">
-                                  <Icon name="Heart" size={12} />
-                                  <span className="text-xs">{article.likes}</span>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        ) : (
-                          <p className="text-muted-foreground text-sm">Статьи скоро появятся</p>
-                        )}
-                        <Button variant="outline" size="sm" className="w-full mt-3">
-                          Показать все статьи
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
           </TabsContent>
 
           {/* About Tab */}
