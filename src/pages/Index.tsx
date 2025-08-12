@@ -11,10 +11,7 @@ const Index = () => {
 
   const categories = [
     { id: 'all', name: 'Все статьи', icon: 'Grid3X3' },
-    { id: 'reviews', name: 'Обзоры игр', icon: 'Star' },
-    { id: 'guides', name: 'Гайды', icon: 'BookOpen' },
-    { id: 'news', name: 'Новости', icon: 'Newspaper' },
-    { id: 'streams', name: 'Стримы', icon: 'Video' }
+    { id: 'reviews', name: 'Обзоры игр', icon: 'Star' }
   ];
 
   const articles = [
