@@ -98,7 +98,6 @@ const Index = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:from-accent hover:to-secondary transition-all duration-500">Hard Funkin</h1>
-                <p className="text-muted-foreground animate-fade-in">🎮 Игровой мир глазами геймера</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
