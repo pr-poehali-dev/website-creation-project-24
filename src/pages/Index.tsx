@@ -97,7 +97,7 @@ const Index = () => {
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-foreground bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:from-accent hover:to-secondary transition-all duration-500">GameBlog</h1>
+                <h1 className="text-2xl font-bold text-foreground bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:from-accent hover:to-secondary transition-all duration-500">Hard Funkin</h1>
                 <p className="text-muted-foreground animate-fade-in">🎮 Игровой мир глазами геймера</p>
               </div>
             </div>
