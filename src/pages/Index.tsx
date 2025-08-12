@@ -130,9 +130,25 @@ const Index = () => {
 
           {/* Articles Tab */}
           <TabsContent value="articles" className="space-y-8">
+            {/* Categories */}
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <Button
+                  key={category.id}
+                  variant={selectedCategory === category.id ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedCategory(category.id)}
+                  className="flex items-center space-x-2"
+                >
+                  <Icon name={category.icon} size={16} />
+                  <span>{category.name}</span>
+                </Button>
+              ))}
+            </div>
+
             {/* Articles Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {articles.map((article) => (
+              {filteredArticles.map((article) => (
                 <Card key={article.id} className="game-card group">
                   <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg overflow-hidden">
                     <div className="w-full h-full flex items-center justify-center">
