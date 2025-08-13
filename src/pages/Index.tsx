@@ -9,42 +9,9 @@ const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMonth, setSelectedMonth] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'Все статьи', icon: 'Grid3X3' },
-    { id: 'reviews', name: 'Обзоры игр', icon: 'Star' }
-  ];
+
 
   const articles = [
-    {
-      id: 1,
-      title: 'Лучшие инди-игры 2024 года',
-      excerpt: 'Подборка самых интересных независимых игр, которые стоит попробовать в этом году.',
-      category: 'reviews',
-      date: '2024-08-10',
-      readTime: '5 мин',
-      likes: 42,
-      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
-    },
-    {
-      id: 2,
-      title: 'Как собрать идеальную команду в RPG',
-      excerpt: 'Секреты создания сбалансированной группы персонажей для максимальной эффективности.',
-      category: 'guides',
-      date: '2024-08-08',
-      readTime: '8 мин',
-      likes: 67,
-      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
-    },
-    {
-      id: 3,
-      title: 'Анонсы с Gamescom 2024',
-      excerpt: 'Самые важные новости и анонсы с крупнейшей игровой выставки в Европе.',
-      category: 'news',
-      date: '2024-08-05',
-      readTime: '6 мин',
-      likes: 89,
-      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
-    },
     {
       id: 4,
       title: 'Стрим: Прохождение Hollow Knight',
