@@ -36,13 +36,23 @@ const Index = () => {
     : articles.filter(article => article.category === selectedCategory);
 
   const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category?.icon || 'FileText';
+    const categoryIcons: { [key: string]: string } = {
+      streams: 'Video',
+      reviews: 'Star',
+      guides: 'BookOpen',
+      news: 'Newspaper'
+    };
+    return categoryIcons[categoryId] || 'FileText';
   };
 
   const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category?.name || 'Статья';
+    const categoryNames: { [key: string]: string } = {
+      streams: 'Стрим',
+      reviews: 'Обзор',
+      guides: 'Гайд',
+      news: 'Новости'
+    };
+    return categoryNames[categoryId] || 'Статья';
   };
 
   return (
