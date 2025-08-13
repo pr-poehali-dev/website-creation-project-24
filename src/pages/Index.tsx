@@ -267,6 +267,7 @@ const Index = () => {
                 </Card>
               ))}
             </div>
+            </div>
           </TabsContent>
 
           {/* About Tab */}
