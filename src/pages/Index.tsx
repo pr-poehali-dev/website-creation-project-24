@@ -11,6 +11,69 @@ const Index = () => {
 
 
 
+  const games = [
+    {
+      id: 1,
+      title: 'Hollow Knight',
+      description: 'Мрачная метроидвания с великолепным арт-стилем',
+      genre: 'Метроидвания',
+      size: '9 ГБ',
+      rating: 4.9,
+      downloads: 1200,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    },
+    {
+      id: 2,
+      title: 'Celeste',
+      description: 'Платформер о преодолении себя и своих страхов',
+      genre: 'Платформер',
+      size: '1.2 ГБ',
+      rating: 4.8,
+      downloads: 890,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    },
+    {
+      id: 3,
+      title: 'Hades',
+      description: 'Рогалик с отличной историей и геймплеем',
+      genre: 'Рогалик',
+      size: '15 ГБ',
+      rating: 4.9,
+      downloads: 2100,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    },
+    {
+      id: 4,
+      title: 'A Hat in Time',
+      description: '3D платформер в стиле классических игр Nintendo',
+      genre: '3D Платформер',
+      size: '7 ГБ',
+      rating: 4.7,
+      downloads: 650,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    },
+    {
+      id: 5,
+      title: 'Dead Cells',
+      description: 'Быстрый и динамичный рогалик-метроидвания',
+      genre: 'Рогалик',
+      size: '500 МБ',
+      rating: 4.6,
+      downloads: 980,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    },
+    {
+      id: 6,
+      title: 'Ori and the Will of the Wisps',
+      description: 'Красивая метроидвания с трогательной историей',
+      genre: 'Метроидвания',
+      size: '8 ГБ',
+      rating: 4.8,
+      downloads: 1500,
+      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+    }
+  ];
+
   const articles = [
     {
       id: 4,
@@ -107,11 +170,66 @@ const Index = () => {
 
           {/* Articles Tab */}
           <TabsContent value="articles" className="space-y-8">
-
+            {/* Games Catalog */}
+            <div className="space-y-6">
+              <div className="text-center space-y-2">
+                <h2 className="text-3xl font-bold text-foreground">Каталог игр</h2>
+                <p className="text-muted-foreground">Лучшие инди-игры для скачивания</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {games.map((game) => (
+                  <Card key={game.id} className="game-card group">
+                    <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg overflow-hidden">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <Icon name="Gamepad2" size={32} className="text-primary" />
+                      </div>
+                    </div>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <Badge className="category-tag">
+                          {game.genre}
+                        </Badge>
+                        <div className="flex items-center space-x-1 text-muted-foreground">
+                          <Icon name="Star" size={14} />
+                          <span className="text-sm">{game.rating}</span>
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg group-hover:text-primary transition-colors">
+                        {game.title}
+                      </CardTitle>
+                      <CardDescription>{game.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
+                        <span className="flex items-center space-x-1">
+                          <Icon name="HardDrive" size={14} />
+                          <span>{game.size}</span>
+                        </span>
+                        <span className="flex items-center space-x-1">
+                          <Icon name="Download" size={14} />
+                          <span>{game.downloads}</span>
+                        </span>
+                      </div>
+                      <Button className="w-full game-button">
+                        <Icon name="Download" size={16} className="mr-2" />
+                        Скачать игру
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
 
             {/* Articles Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {articles.map((article) => (
+            <div className="space-y-6">
+              <div className="text-center space-y-2">
+                <h2 className="text-3xl font-bold text-foreground">Статьи и стримы</h2>
+                <p className="text-muted-foreground">Контент о любимых играх</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {articles.map((article) => (
                 <Card key={article.id} className="game-card group">
                   <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg overflow-hidden">
                     <div className="w-full h-full flex items-center justify-center">
