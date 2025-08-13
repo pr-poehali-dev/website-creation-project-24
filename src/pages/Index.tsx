@@ -142,8 +142,8 @@ const Index = () => {
                       <span>{new Date(article.date).toLocaleDateString('ru-RU')}</span>
                     </div>
                     <Button className="w-full game-button">
-                      <Icon name="ArrowRight" size={16} className="mr-2" />
-                      Читать далее
+                      <Icon name="Download" size={16} className="mr-2" />
+                      Скачать игру
                     </Button>
                   </CardContent>
                 </Card>
