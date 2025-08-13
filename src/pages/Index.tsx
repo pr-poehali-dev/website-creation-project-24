@@ -220,54 +220,6 @@ const Index = () => {
                 ))}
               </div>
             </div>
-
-            {/* Articles Grid */}
-            <div className="space-y-6">
-              <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-foreground">Статьи и стримы</h2>
-                <p className="text-muted-foreground">Контент о любимых играх</p>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {articles.map((article) => (
-                <Card key={article.id} className="game-card group">
-                  <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg overflow-hidden">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <Icon name={getCategoryIcon(article.category)} size={32} className="text-primary" />
-                    </div>
-                  </div>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge className="category-tag">
-                        {getCategoryName(article.category)}
-                      </Badge>
-                      <div className="flex items-center space-x-1 text-muted-foreground">
-                        <Icon name="Heart" size={14} />
-                        <span className="text-sm">{article.likes}</span>
-                      </div>
-                    </div>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      {article.title}
-                    </CardTitle>
-                    <CardDescription>{article.excerpt}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
-                      <span className="flex items-center space-x-1">
-                        <Icon name="Clock" size={14} />
-                        <span>{article.readTime}</span>
-                      </span>
-                      <span>{new Date(article.date).toLocaleDateString('ru-RU')}</span>
-                    </div>
-                    <Button className="w-full game-button">
-                      <Icon name="Download" size={16} className="mr-2" />
-                      Скачать игру
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-            </div>
           </TabsContent>
 
           {/* About Tab */}
