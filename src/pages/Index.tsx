@@ -23,16 +23,7 @@ const Index = () => {
     }
   ];
 
-  const monthlyArchive = [
-    { month: 'Август 2024', count: 8, articles: articles.filter(a => a.date.includes('2024-08')) },
-    { month: 'Июль 2024', count: 12, articles: articles.filter(a => a.date.includes('2024-07')) },
-    { month: 'Июнь 2024', count: 15, articles: [] },
-    { month: 'Май 2024', count: 10, articles: [] }
-  ];
 
-  const filteredArticles = selectedCategory === 'all' 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
 
   const getCategoryIcon = (categoryId: string) => {
     const categoryIcons: { [key: string]: string } = {
