@@ -11,16 +11,15 @@ const Index = () => {
 
 
 
-  const articles = [
+  const games = [
     {
-      id: 4,
-      title: 'Стрим: Прохождение Hollow Knight',
-      excerpt: 'Записи стрима с полным прохождением одной из лучших метроидваний.',
-      category: 'streams',
-      date: '2024-07-28',
-      readTime: '120 мин',
-      likes: 156,
-      image: 'https://cdn.poehali.dev/files/53a80883-18b3-4326-9fd2-b12717559127.png'
+      id: 1,
+      title: "Hard Funkin",
+      description: "Ритм-игра с крутыми битами и яркой графикой",
+      genre: "Ритм",
+      rating: "4.3",
+      size: "180 МБ",
+      downloads: "25к"
     }
   ];
 
@@ -109,37 +108,40 @@ const Index = () => {
           <TabsContent value="articles" className="space-y-8">
 
 
-            {/* Articles Grid */}
+            {/* Games Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {articles.map((article) => (
-                <Card key={article.id} className="game-card group">
+              {games.map((game) => (
+                <Card key={game.id} className="game-card group">
                   <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary/20 rounded-t-lg overflow-hidden">
                     <div className="w-full h-full flex items-center justify-center">
-                      <Icon name={getCategoryIcon(article.category)} size={32} className="text-primary" />
+                      <Icon name="Gamepad2" size={32} className="text-primary" />
                     </div>
                   </div>
                   <CardHeader className="pb-3">
                     <div className="flex items-center justify-between mb-2">
                       <Badge className="category-tag">
-                        {getCategoryName(article.category)}
+                        {game.genre}
                       </Badge>
                       <div className="flex items-center space-x-1 text-muted-foreground">
-                        <Icon name="Heart" size={14} />
-                        <span className="text-sm">{article.likes}</span>
+                        <Icon name="Star" size={14} />
+                        <span className="text-sm">{game.rating}</span>
                       </div>
                     </div>
                     <CardTitle className="text-lg group-hover:text-primary transition-colors">
-                      {article.title}
+                      {game.title}
                     </CardTitle>
-                    <CardDescription>{article.excerpt}</CardDescription>
+                    <CardDescription>{game.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
                     <div className="flex items-center justify-between text-sm text-muted-foreground mb-4">
                       <span className="flex items-center space-x-1">
-                        <Icon name="Clock" size={14} />
-                        <span>{article.readTime}</span>
+                        <Icon name="HardDrive" size={14} />
+                        <span>{game.size}</span>
                       </span>
-                      <span>{new Date(article.date).toLocaleDateString('ru-RU')}</span>
+                      <span className="flex items-center space-x-1">
+                        <Icon name="Download" size={14} />
+                        <span>{game.downloads}</span>
+                      </span>
                     </div>
                     <Button className="w-full game-button">
                       <Icon name="Download" size={16} className="mr-2" />
