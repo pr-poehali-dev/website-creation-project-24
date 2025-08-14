@@ -15,7 +15,7 @@ const Index = () => {
     {
       id: 1,
       title: "Hard Funkin",
-      description: "Ритм-игра с крутыми битами и яркой графикой",
+      description: "Ритм-игра с крутыми битами",
       genre: "Ритм",
       rating: "4.3",
       size: "180 МБ",
