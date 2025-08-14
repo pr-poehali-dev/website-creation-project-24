@@ -65,14 +65,6 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">
-                <Icon name="Home" size={16} className="mr-2" />
-                Главная
-              </Button>
-              <Button variant="ghost" size="sm">
-                <Icon name="User" size={16} className="mr-2" />
-                О авторе
-              </Button>
               <Button 
                 variant="outline" 
                 size="sm" 
