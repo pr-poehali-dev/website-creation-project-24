@@ -73,7 +73,12 @@ const Index = () => {
                 <Icon name="User" size={16} className="mr-2" />
                 О авторе
               </Button>
-              <Button variant="outline" size="sm" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                onClick={() => window.open('https://t.me/gamesseli', '_blank')}
+              >
                 <Icon name="MessageCircle" size={16} className="mr-2" />
                 Мой канал Telegram
               </Button>
