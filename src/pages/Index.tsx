@@ -83,8 +83,8 @@ const Index = () => {
         <Tabs defaultValue="articles" className="space-y-8">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="articles" className="flex items-center space-x-2">
-              <Icon name="FileText" size={16} />
-              <span>Статьи</span>
+              <Icon name="Download" size={16} />
+              <span>Скачать игру (для ПК и телефона)</span>
             </TabsTrigger>
             <TabsTrigger value="about" className="flex items-center space-x-2">
               <Icon name="User" size={16} />
