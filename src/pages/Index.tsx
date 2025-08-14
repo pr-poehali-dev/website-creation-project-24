@@ -139,7 +139,10 @@ const Index = () => {
                         <span>{game.downloads}</span>
                       </span>
                     </div>
-                    <Button className="w-full game-button">
+                    <Button 
+                      className="w-full game-button"
+                      onClick={() => window.open('https://www.mediafire.com/file/lzpnyon1j259uac/fnf.zip/file', '_blank')}
+                    >
                       <Icon name="Download" size={16} className="mr-2" />
                       Скачать игру
                     </Button>
