@@ -166,33 +166,6 @@ const Index = () => {
                   Начинал с простых обзоров, а теперь делаю подробные гайды, стримлю 
                   и делюсь свежими новостями из мира гейминга.
                 </p>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="text-center p-4 rounded-lg bg-primary/10">
-                    <div className="text-2xl font-bold text-primary">200+</div>
-                    <div className="text-sm text-muted-foreground">Статей написано</div>
-                  </div>
-                  <div className="text-center p-4 rounded-lg bg-secondary/10">
-                    <div className="text-2xl font-bold text-secondary">50+</div>
-                    <div className="text-sm text-muted-foreground">Игр пройдено</div>
-                  </div>
-                  <div className="text-center p-4 rounded-lg bg-accent/10">
-                    <div className="text-2xl font-bold text-accent">5k+</div>
-                    <div className="text-sm text-muted-foreground">Подписчиков</div>
-                  </div>
-                </div>
-
-                <div className="space-y-3">
-                  <h4 className="font-semibold flex items-center space-x-2">
-                    <Icon name="Gamepad2" size={16} />
-                    <span>Любимые жанры</span>
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {['RPG', 'Инди', 'Метроидвания', 'Рогалики', 'Платформеры'].map((genre) => (
-                      <Badge key={genre} variant="outline">{genre}</Badge>
-                    ))}
-                  </div>
-                </div>
 
                 <div className="flex space-x-4">
                   <Button className="game-button">
