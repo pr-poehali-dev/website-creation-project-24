@@ -161,11 +161,6 @@ const Index = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  Привет! Меня зовут [Имя], и я создаю контент об играх уже более 5 лет. 
-                  Начинал с простых обзоров, а теперь делаю подробные гайды, стримлю 
-                  и делюсь свежими новостями из мира гейминга.
-                </p>
 
                 <div className="flex space-x-4">
                   <Button className="game-button">
