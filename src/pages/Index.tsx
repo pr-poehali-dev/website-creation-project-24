@@ -153,7 +153,7 @@ const Index = () => {
                     <Icon name="User" size={24} className="text-white" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl">Игровой Блогер</CardTitle>
+                    <CardTitle className="text-2xl">Seli</CardTitle>
                     <CardDescription className="text-lg">
                       Страстный геймер и контент-мейкер
                     </CardDescription>
