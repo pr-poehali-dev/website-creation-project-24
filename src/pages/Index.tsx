@@ -17,9 +17,9 @@ const Index = () => {
       title: "Hard Funkin",
       description: "Ритм-игра с крутыми битами",
       genre: "Ритм",
-      rating: "4.3",
-      size: "180 МБ",
-      downloads: "25к"
+      rating: "",
+      size: "",
+      downloads: ""
     }
   ];
 
@@ -161,10 +161,7 @@ const Index = () => {
               <CardContent className="space-y-6">
 
                 <div className="flex space-x-4">
-                  <Button className="game-button">
-                    <Icon name="MessageCircle" size={16} className="mr-2" />
-                    Написать
-                  </Button>
+
                   <Button variant="outline">
                     <Icon name="Youtube" size={16} className="mr-2" />
                     YouTube
