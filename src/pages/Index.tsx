@@ -154,9 +154,7 @@ const Index = () => {
                   </div>
                   <div>
                     <CardTitle className="text-2xl">Seli</CardTitle>
-                    <CardDescription className="text-lg">
-                      Страстный геймер и контент-мейкер
-                    </CardDescription>
+
                   </div>
                 </div>
               </CardHeader>
@@ -171,10 +169,7 @@ const Index = () => {
                     <Icon name="Youtube" size={16} className="mr-2" />
                     YouTube
                   </Button>
-                  <Button variant="outline">
-                    <Icon name="Twitch" size={16} className="mr-2" />
-                    Twitch
-                  </Button>
+
                 </div>
               </CardContent>
             </Card>
