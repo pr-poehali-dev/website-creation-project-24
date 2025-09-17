@@ -166,7 +166,10 @@ const Index = () => {
 
                 <div className="flex space-x-4">
 
-                  <Button variant="outline">
+                  <Button 
+                    variant="outline"
+                    onClick={() => window.open('https://youtube.com/@seli-i9m?si=TbRYpaL96AKaY-Pw', '_blank')}
+                  >
                     <Icon name="Youtube" size={16} className="mr-2" />
                     YouTube
                   </Button>
