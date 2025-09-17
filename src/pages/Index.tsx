@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -8,6 +8,28 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedMonth, setSelectedMonth] = useState('');
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      audio.volume = 0.3;
+      audio.loop = true;
+    }
+  }, []);
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (audio) {
+      if (isPlaying) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
 
 
@@ -55,7 +77,7 @@ const Index = () => {
               <div className="relative w-14 h-14 bg-gradient-to-br from-primary via-accent to-secondary rounded-xl flex items-center justify-center animate-bounce-subtle shadow-lg hover:scale-110 transition-transform duration-300 group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 rounded-xl blur-sm opacity-50 group-hover:opacity-70 transition-opacity"></div>
                 <div className="relative z-10 flex items-center justify-center">
-                  <img src="https://cdn.poehali.dev/files/c2f742f1-65bf-4918-976a-5cd309d8a72e.jpeg" alt="Seli" className="w-8 h-8 rounded-lg object-cover" />
+                  <img src="https://cdn.poehali.dev/files/90534e23-2c2a-4d73-a335-bdeb774b7aab.png" alt="Hard Funkin" className="w-8 h-8 rounded-lg object-cover" />
                 </div>
                 <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full animate-ping opacity-40"></div>
                 <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
@@ -65,6 +87,15 @@ const Index = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={toggleMusic}
+              >
+                <Icon name={isPlaying ? "Pause" : "Play"} size={16} className="mr-2" />
+                {isPlaying ? "Пауза" : "Музыка"}
+              </Button>
               <Button 
                 variant="outline" 
                 size="sm" 
@@ -180,6 +211,12 @@ const Index = () => {
           </TabsContent>
         </Tabs>
       </div>
+      
+      <audio
+        ref={audioRef}
+        src="https://archive.org/download/AnalogHorrorFunk67/analog-horror-funk-67-dj-raulipues-slowed.mp3"
+        preload="auto"
+      />
     </div>
   );
 };
