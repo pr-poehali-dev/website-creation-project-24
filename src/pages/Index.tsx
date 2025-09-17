@@ -115,8 +115,7 @@ const Index = () => {
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger 
               value="articles" 
-              className="flex items-center space-x-2 cursor-pointer"
-              onClick={() => window.open('https://www.mediafire.com/file/erq0q1ldeg05o8e/hard_funkin.zip/file', '_blank')}
+              className="flex items-center space-x-2"
             >
               <Icon name="Download" size={16} />
               <span>Скачать игру (для ПК и телефона)</span>
@@ -168,7 +167,7 @@ const Index = () => {
                     </div>
                     <Button 
                       className="w-full game-button"
-                      onClick={() => window.open('https://www.mediafire.com/file/lzpnyon1j259uac/fnf.zip/file', '_blank')}
+                      onClick={() => window.open('https://www.mediafire.com/file/erq0q1ldeg05o8e/hard_funkin.zip/file', '_blank')}
                     >
                       <Icon name="Download" size={16} className="mr-2" />
                       Скачать игру
